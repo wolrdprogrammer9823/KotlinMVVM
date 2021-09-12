@@ -6,6 +6,7 @@ import com.wolfsea.kotlinmvvm.adapter.SimpleDataBindingAdapter
 import com.wolfsea.kotlinmvvm.bean.ColumnData
 import com.wolfsea.kotlinmvvm.bean.User
 import com.wolfsea.kotlinmvvm.extendmethod.toast
+import com.wolfsea.kotlinmvvm.layoutmanager.CardLayoutManager
 import com.wolfsea.kotlinmvvm.layoutmanager.CustomLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
