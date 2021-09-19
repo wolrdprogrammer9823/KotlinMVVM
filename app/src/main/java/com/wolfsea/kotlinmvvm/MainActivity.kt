@@ -1,6 +1,7 @@
 package com.wolfsea.kotlinmvvm
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wolfsea.kotlinmvvm.adapter.SimpleDataBindingAdapter
 import com.wolfsea.kotlinmvvm.bean.ColumnData
@@ -76,7 +77,14 @@ class MainActivity : AppCompatActivity() {
                         "item1"
                     )
                 )
-                userList.add(User("小明", 35, mutableListOf(ColumnData("2.5", 1.0F, 2.0F)), "item2"))
+
+                userList.add(
+                    User(
+                        "小明",
+                        35,
+                        mutableListOf(ColumnData("2.5", 1.0F, 2.0F)),
+                        "item2"))
+
                 userList.add(
                     User(
                         "小假",
@@ -85,6 +93,7 @@ class MainActivity : AppCompatActivity() {
                         "item3"
                     )
                 )
+
                 userList.add(
                     User(
                         "小同",
@@ -93,6 +102,7 @@ class MainActivity : AppCompatActivity() {
                         "item4"
                     )
                 )
+
                 userList.add(
                     User(
                         "小国",
@@ -101,6 +111,7 @@ class MainActivity : AppCompatActivity() {
                         "item5"
                     )
                 )
+
                 userList.add(
                     User(
                         "小钱",
@@ -118,7 +129,7 @@ class MainActivity : AppCompatActivity() {
                         "item7")
                 )
 
-/*                userList.add(
+                userList.add(
                     User(
                         "小和",
                         23,
@@ -143,11 +154,17 @@ class MainActivity : AppCompatActivity() {
                         mutableListOf(ColumnData("10.1", 28.0F, 18.0F)),
                         "item10"
                     )
-                )*/
+                )
             }
+
+            //设置底部留白,方便item的滚动.
+            val condition = userList.size >= 7
+            mvvm_rv.setPadding(0, 0, 0, if (condition) resources.getDimension(R.dimen.dp_60).toInt() else 0)
+            mvvm_rv.clipToPadding = !condition
 
             mAdapter.items.addAll(userList)
         }
+
 
         /*mAdapter.items.apply {
             add(User("小红", 25, mutableListOf(ColumnData("12.5",11.0F,12.0F)),"item1"))

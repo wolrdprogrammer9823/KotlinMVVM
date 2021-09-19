@@ -13,8 +13,6 @@
         android:layout_height="wrap_content"
         android:overScrollMode="never"
         android:scrollbars="none"
-        android:clipToPadding="false"
-        android:paddingBottom="@dimen/dp_60"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
