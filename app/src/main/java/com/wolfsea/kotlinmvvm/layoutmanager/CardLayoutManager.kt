@@ -3,7 +3,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlin.math.min
 
 /**
- *@desc
+ *@desc  卡片布局管理器
  *@author liuliheng
  *@time 2021/9/12  23:43
  **/
@@ -28,11 +28,9 @@ class CardLayoutManager(
 
         //先移除所有view
         detachAndScrapAttachedViews(recycler!!)
-
         val viewCount = min(itemCount, mShowViewMax)
 
         for (i in (viewCount - 1).downTo(0)) {
-
             //获取view,添加view,测量view.
             val view = recycler.getViewForPosition(i)
             addView(view)
@@ -40,8 +38,7 @@ class CardLayoutManager(
 
             //获取宽高
             val decoWidth = getDecoratedMeasuredWidth(view)
-            val decoHeight = getBottomDecorationHeight(view)
-
+            val decoHeight = getDecoratedMeasuredHeight(view)
             //view在Recyclerview中的剩余宽度
             val widthSpace = width - decoWidth
 
