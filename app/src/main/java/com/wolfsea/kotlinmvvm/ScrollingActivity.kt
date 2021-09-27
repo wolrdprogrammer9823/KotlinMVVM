@@ -1,9 +1,7 @@
 package com.wolfsea.kotlinmvvm
 
 import android.os.Bundle
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+import com.wolfsea.kotlinmvvm.extendmethod.startActivity
 import androidx.appcompat.app.AppCompatActivity
 import com.wolfsea.kotlinmvvm.databinding.ActivityScrollingBinding
 
@@ -17,12 +15,17 @@ class ScrollingActivity : AppCompatActivity() {
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-        binding.toolbarLayout.title = title
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        binding.cardBtn.setOnClickListener {
+
+            startActivity<FeatureActivity>()
         }
 
+        binding.rotateBtn.setOnClickListener {
+            startActivity<LayoutManagerRotateActivity>()
+        }
+
+        binding.defineBtn.setOnClickListener {
+            startActivity<MainActivity>()
+        }
     }
 }

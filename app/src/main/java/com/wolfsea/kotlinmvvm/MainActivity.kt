@@ -7,6 +7,8 @@ import com.wolfsea.kotlinmvvm.adapter.SimpleDataBindingAdapter
 import com.wolfsea.kotlinmvvm.bean.ColumnData
 import com.wolfsea.kotlinmvvm.bean.User
 import com.wolfsea.kotlinmvvm.extendmethod.toast
+import com.wolfsea.kotlinmvvm.layoutmanager.DefineLayoutManager
+import com.wolfsea.kotlinmvvm.layoutmanager.DefineLayoutManager2
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 
@@ -61,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         mvvm_rv.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
+            layoutManager = DefineLayoutManager()
             adapter = mAdapter
         }
 
@@ -155,12 +157,67 @@ class MainActivity : AppCompatActivity() {
                         "item10"
                     )
                 )
+
+                userList.add(
+                    User(
+                        "小挺",
+                        25,
+                        mutableListOf(ColumnData("10.1", 28.0F, 18.0F)),
+                        "item10"
+                    )
+                )
+
+                userList.add(
+                    User(
+                        "小挺",
+                        25,
+                        mutableListOf(ColumnData("10.1", 28.0F, 18.0F)),
+                        "item10"
+                    )
+                )
+
+                userList.add(
+                    User(
+                        "小挺",
+                        25,
+                        mutableListOf(ColumnData("10.1", 28.0F, 18.0F)),
+                        "item10"
+                    )
+                )
+
+                userList.add(
+                    User(
+                        "小挺",
+                        25,
+                        mutableListOf(ColumnData("10.1", 28.0F, 18.0F)),
+                        "item10"
+                    )
+                )
+
+                userList.add(
+                    User(
+                        "小挺",
+                        25,
+                        mutableListOf(ColumnData("10.1", 28.0F, 18.0F)),
+                        "item10"
+                    )
+                )
+
+                userList.add(
+                    User(
+                        "小挺",
+                        25,
+                        mutableListOf(ColumnData("10.1", 28.0F, 18.0F)),
+                        "item10"
+                    )
+                )
+
             }
 
             //设置底部留白,方便item的滚动.
-            val condition = userList.size >= 7
-            mvvm_rv.setPadding(0, 0, 0, if (condition) resources.getDimension(R.dimen.dp_60).toInt() else 0)
-            mvvm_rv.clipToPadding = !condition
+            //val condition = userList.size >= 7
+            //mvvm_rv.setPadding(0, 0, 0, if (condition) resources.getDimension(R.dimen.dp_60).toInt() else 0)
+            //mvvm_rv.clipToPadding = !condition
 
             mAdapter.items.addAll(userList)
         }

@@ -5,11 +5,13 @@
       <map>
         <entry key="..\:/KotlinMVVM/app/src/main/res/drawable/list_item_background.xml" value="0.33697916666666666" />
         <entry key="..\:/KotlinMVVM/app/src/main/res/layout/activity_feature.xml" value="0.22" />
+        <entry key="..\:/KotlinMVVM/app/src/main/res/layout/activity_layout_manager_rotate.xml" value="0.3390625" />
         <entry key="..\:/KotlinMVVM/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/KotlinMVVM/app/src/main/res/layout/activity_scrolling.xml" value="0.328125" />
+        <entry key="..\:/KotlinMVVM/app/src/main/res/layout/activity_scrolling.xml" value="0.16" />
         <entry key="..\:/KotlinMVVM/app/src/main/res/layout/adapter_data_binding.xml" value="0.3359375" />
         <entry key="..\:/KotlinMVVM/app/src/main/res/layout/content_scrolling.xml" value="0.328125" />
         <entry key="..\:/KotlinMVVM/app/src/main/res/layout/item_card.xml" value="0.32760416666666664" />
+        <entry key="..\:/KotlinMVVM/app/src/main/res/layout/item_turntable.xml" value="0.20108695652173914" />
         <entry key="..\:/KotlinMVVM/app/src/main/res/layout/table_list_item.xml" value="0.31666666666666665" />
       </map>
     </option>
